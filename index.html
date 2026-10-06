@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CloudBlock Skyblock</title>
+<meta name="description" content="CloudBlock is a Minecraft Java skyblock server. Start on a tiny island in the void, build ore generators, finish challenges and win the weekly island competition. Join at cloudblock.cloud">
+<meta property="og:title" content="CloudBlock Skyblock">
+<meta property="og:description" content="Start on a tiny island in the void and build it into a kingdom. Join at cloudblock.cloud">
+<meta property="og:image" content="https://cloudblock.cloud/assets/logo.png">
+<meta property="og:url" content="https://cloudblock.cloud/">
+<meta name="theme-color" content="#5ee7df">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500;700&family=Nunito:wght@400;600;800&family=JetBrains+Mono:wght@500;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="sky" id="top">
+  <div class="clouds" aria-hidden="true"><span class="cloud c1"></span><span class="cloud c2"></span><span class="cloud c3"></span></div>
+  <nav class="nav wrap" aria-label="Main">
+    <a class="brand" href="#top"><img src="assets/favicon.png" alt="" width="32" height="32"><span>CloudBlock</span></a>
+    <div class="nav-links">
+      <a href="#start">Play</a>
+      <a href="#island">Features</a>
+      <a href="#weekly">Weekly</a>
+      <a href="#ranks">Ranks</a>
+      <a class="discord-link" href="#" data-discord hidden>Discord</a>
+    </div>
+  </nav>
+
+  <div class="hero wrap">
+    <div class="hero-copy">
+      <p class="status" id="status" aria-live="polite"><span class="dot"></span><span id="status-text">Checking server…</span></p>
+      <h1>A tiny island.<br>An endless sky.</h1>
+      <p class="lede">CloudBlock is a Minecraft Java skyblock server. You start on a few blocks of dirt above the void and grow them into a kingdom: cobblestone generators, farms, challenges, and a leaderboard that resets every week.</p>
+      <div class="join">
+        <button class="ip" id="copy-ip" type="button" aria-describedby="copy-hint">
+          <span class="ip-label">Server address</span>
+          <span class="ip-value" id="ip-value">cloudblock.cloud</span>
+          <span class="ip-action" id="copy-hint">Click to copy</span>
+        </button>
+        <a class="btn btn-discord" href="#" data-discord hidden>Join our Discord</a>
+      </div>
+      <p class="small">Java Edition 26.3 · free to play · no mods needed</p>
+    </div>
+    <div class="hero-art">
+      <img class="island" src="assets/logo.png" alt="A floating grass island with an oak tree, a chest and a waterfall" width="512" height="512">
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="section wrap" id="start">
+    <h2>Start playing in four steps</h2>
+    <ol class="steps">
+      <li><h3>Add the server</h3><p>Minecraft Java → <b>Multiplayer</b> → <b>Add Server</b>, address <code>cloudblock.cloud</code>.</p></li>
+      <li><h3>Get your island</h3><p>Type <code>/is create</code>. Your starter chest has lava, two ice and seeds.</p></li>
+      <li><h3>Build a generator</h3><p>Lava on one end of a trench, water on the other: cobblestone forms in between, forever.</p></li>
+      <li><h3>Climb the ranks</h3><p>Finish <code>/challenges</code>, sell at <code>/shop</code>, raise your level with <code>/is level</code>.</p></li>
+    </ol>
+  </section>
+
+  <section class="section wrap" id="island">
+    <h2>What's on your island</h2>
+    <div class="features">
+      <article class="feature">
+        <h3>Ore generators</h3>
+        <p>Upgrade your cobblestone generator through six tiers. At Diamond Age, every block can roll ore:</p>
+        <table class="odds">
+          <caption class="sr">Diamond Age generator odds</caption>
+          <tbody>
+            <tr><th scope="row">Cobblestone</th><td>62%</td></tr>
+            <tr><th scope="row">Iron ore</th><td>10%</td></tr>
+            <tr><th scope="row">Coal ore</th><td>9%</td></tr>
+            <tr><th scope="row">Gold ore</th><td>5%</td></tr>
+            <tr><th scope="row">Diamond ore</th><td>2%</td></tr>
+            <tr><th scope="row">Emerald ore</th><td>1%</td></tr>
+          </tbody>
+        </table>
+      </article>
+      <article class="feature">
+        <h3>26 challenges</h3>
+        <p>From <i>Cobble Collector</i> to <i>Netherite Dream</i>, in four tiers. Each one pays money or items, and many can be repeated.</p>
+      </article>
+      <article class="feature">
+        <h3>Play together</h3>
+        <p>Invite friends to your team, or join someone else's island as a co-op builder while keeping your own.</p>
+      </article>
+      <article class="feature">
+        <h3>Island upgrades</h3>
+        <p>Grow your border from 51×51 to 201×201 blocks, fit up to 8 teammates, and unlock better generators.</p>
+      </article>
+      <article class="feature">
+        <h3>Daily rewards</h3>
+        <p>Log in seven days in a row with <code>/daily</code>. Day seven gives $1,000 and two diamonds.</p>
+      </article>
+      <article class="feature">
+        <h3>Spawn parkour</h3>
+        <p>Thirteen jumps, one checkpoint and a timer. Beat the record and the whole server hears about it.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section wrap weekly" id="weekly">
+    <div class="weekly-copy">
+      <h2>Weekly island competition</h2>
+      <p>Every Monday at 00:00 UTC, the three highest-level islands are paid out, and <b>every team member</b> gets the prize.</p>
+      <p class="countdown" aria-live="off">Next payout in <span id="countdown" class="mono">—</span></p>
+    </div>
+    <ol class="podium" aria-label="Weekly prizes per team member">
+      <li class="p2"><span class="place">2nd</span><span class="prize mono">$2,500</span></li>
+      <li class="p1"><span class="place">1st</span><span class="prize mono">$5,000</span></li>
+      <li class="p3"><span class="place">3rd</span><span class="prize mono">$1,000</span></li>
+    </ol>
+  </section>
+
+  <section class="section wrap" id="ranks">
+    <h2>Ranks</h2>
+    <p class="section-lede">Ranks support the server and are cosmetic only. Everyone plays with the same islands, generators and prices.</p>
+    <div class="table-wrap">
+      <table class="ranks">
+        <thead><tr><th scope="col">Rank</th><th scope="col">Price</th><th scope="col">Perks</th></tr></thead>
+        <tbody>
+          <tr><td><span class="tag vip">[VIP]</span></td><td class="mono">$7.99</td><td>Green prefix in chat, tab and above your head; white chat</td></tr>
+          <tr><td><span class="tag vip">[VIP<b class="plus-gold">+</b>]</span></td><td class="mono">$14.99</td><td>VIP perks, plus join and leave announcements</td></tr>
+          <tr><td><span class="tag mvp">[MVP]</span></td><td class="mono">$24.99</td><td>VIP+ perks, plus <code>/fly</code> at spawn</td></tr>
+          <tr><td><span class="tag mvp">[MVP<b class="plus-red">+</b>]</span></td><td class="mono">$39.99</td><td>MVP perks, plus 13 colours for your +, and teleport effects</td></tr>
+          <tr><td><span class="tag mvpp">[MVP<b class="plus-red">++</b>]</span></td><td class="mono">$7.99 / month</td><td>MVP+ perks, plus a gold rank and name, and a firework when you join</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">To buy a rank, open a <b>Buy a Rank</b> ticket in our Discord. Staff will confirm the price and apply your rank in-game.</p>
+  </section>
+
+  <section class="section wrap" id="faq">
+    <h2>Questions</h2>
+    <div class="faq">
+      <details><summary>Which Minecraft version do I need?</summary><p>Java Edition 26.3. Older Java versions can usually join too. Bedrock is not supported yet.</p></details>
+      <details><summary>What happens if I fall into the void?</summary><p>Nothing bad. You are sent back to your island home with your items.</p></details>
+      <details><summary>Can I restart my island?</summary><p>Yes, with <code>/is reset</code>. Your inventory, ender chest and XP are cleared too, so resets can't be farmed.</p></details>
+      <details><summary>How do I report a player or get help?</summary><p>Open a Support or Report ticket in our Discord. Only you and the staff can see it.</p></details>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <p><b>CloudBlock</b> · <span class="mono">cloudblock.cloud</span></p>
+    <p class="legal">Not an official Minecraft product. Not approved by or associated with Mojang or Microsoft.</p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
