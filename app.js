@@ -4,7 +4,7 @@ const CONFIG = {
   // Address used for the live status check. Add ?status=<host> to the page URL to test another one.
   statusAddress: 'cloudblock.cloud',
   // Permanent Discord invite, e.g. 'https://discord.gg/abc123'. Discord buttons stay hidden while empty.
-  discordUrl: '',
+  discordUrl: 'https://discord.gg/BHaqZDu3X6',
 }
 
 // ---------- copy the server address ----------
