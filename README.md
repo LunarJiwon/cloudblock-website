@@ -9,7 +9,7 @@ cloudblock.cloud 홈페이지입니다. 정적 사이트(HTML/CSS/JS)이고 GitH
 
 ## 도메인 연결
 
-DNS 설정이 끝나면 `../CloudBlockWeb.CNAME.pending`을 `CNAME`으로 되돌려 커밋하고, Pages 설정에서 HTTPS를 켭니다.
+2026-10-06 연결 완료: https://cloudblock.cloud (HTTPS 강제, http·www는 자동으로 이동). DNS는 hosting.co.kr에서 관리합니다.
 
 | 종류 | 이름 | 값 |
 | --- | --- | --- |
