@@ -93,6 +93,7 @@ h3 { font-size: 1.1rem; font-weight: 800; }
 .hero h1 { font: 700 clamp(2.4rem, 6vw, 4.2rem)/1.02 var(--font-display); letter-spacing: .01em; }
 .lede { margin: 0; font-size: 1.12rem; max-width: 56ch; }
 .small { margin: 0; font-size: .92rem; opacity: .85; }
+.bedrock code { background: color-mix(in srgb, var(--surface) 60%, transparent); }
 
 .status {
   justify-self: start; margin: 0;
